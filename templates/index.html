@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Git to Webserver Demonstration</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="./static/style.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Discord: VMColonel</a>
+                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Server Port Validator</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Server Log Scrubber</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5" src="./static/vrising.png" alt="" />
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">Git to Webserver Demonstration</h1>
+            </div>
+        </header>
+        <!-- Portfolio Section-->
+        <section class="page-section portfolio" id="portfolio"></section>
+            <div class="container"></div>
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Server Port Validation Tool</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <div class="text-center mt-4">
+                    This is the credit card payment form<br><br>
+                    <form action="/action_page.php">
+                        <label for="fname">Name on card:</label><br>
+                        <input type="text" id="name" name="name" value="John Doe"><br><br>
+                        <label for="cc">Credit Card Number:</label><br>
+                        <input type="text" id="cc" name="cc" value="12345"><br>
+                        <label for="cc">CVV:</label><br>
+                        <input type="text" id="cvv" name="cvv" value="123"><br>
+                        <label for="cc">Expiry Date:</label><br>
+                        <input type="text" id="expire" name="expire" value="2024-05-02"><br><br>
+                        <input type="submit" value="Submit">
+                      </form> 
+                    <br><br>    
+                </div>
+            </div>
+        </section>
+        <!-- About Section-->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">Log Scrubber</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->
+                <div class="row">
+                    <div class="col-lg-4 ml-auto"><p class="lead">The idea behind the log scrubbing tool is to allow users to have their logs scrubbed of (most) Personal Identifiable Information (PII)</p></div>
+                    <div class="col-lg-4 mr-auto"><p class="lead">It currently scrubs for Passwords, SteamIDs and Character Names</p></div>
+                    <div class="col-lg-4 mr-auto"><p class="lead">This tool is a work in progress. Check to make sure the data was removed, if not, ping me on Discord!</p></div>
+                </div>
+                
+                <!-- About Section Button-->
+                <div class="text-center mt-4">
+                    <div class="container mt-4">
+                        <h2 class="text-capitalize mb-4">Log File Upload</h2>
+                        <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="file">Select a file:</label>
+                                <input type="file" class="form-control-file" id="file" name="file">
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Resources</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Contact Section Form-->
+                <h4 class="text-uppercase mb-4">Stunlock Official</h4>
+                <ul>
+                    <li><a href="https://github.com/StunlockStudios/vrising-dedicated-server-instructions" style="text-decoration: none; font-weight: bold;">Dedicated Server Instructions</a></li>
+                    <li><a href="https://cdn.stunlock.com/blog/2022/05/25083113/Game-Server-Settings.pdf" style="text-decoration: none; font-weight: bold;">GameSettings PDF</a></li>
+                    <li><a href="https://bugs.playvrising.com/" style="text-decoration: none; font-weight: bold;">Bug Tracker</a></li>
+                    <li><a href="https://feedback.playvrising.com/" style="text-decoration: none; font-weight: bold;">Feature Requests Tracker</a></li>
+                    <li><a href="https://discord.com/invite/vrising" style="text-decoration: none; font-weight: bold;">V Rising Discord</a></li>
+                    <li><a href="https://cdn.stunlock.com/legal/Terms_of_Service_VRising.pdf" style="text-decoration: none; font-weight: bold;">Terms of Service</a></li>
+                    <li><a href="https://guides.playvrising.com/hc/en-us" style="text-decoration: none; font-weight: bold;">Guides</a></li>
+                    <ul>
+                        <li><a href="https://guides.playvrising.com/hc/en-us/articles/5812545119005-Code-of-Conduct" style="text-decoration: none; font-weight: bold;">Code of Conduct</a></li>
+                    </ul>
+                    <li><a href="https://store.steampowered.com/news/app/1604030" style="text-decoration: none; font-weight: bold;">Steam News</a></li>
+                    <ul>
+                        
+                        <li><a href="https://store.steampowered.com/news/app/1604030/view/3391799999999373599" style="text-decoration: none; font-weight: bold;">2022-10-31 | Small | 0.5.45194 (Hotfix 16)</a></li>
+
+                        <li><a href="https://store.steampowered.com/news/app/1604030/view/3391799999984873129" style="text-decoration: none; font-weight: bold;">2022-10-27 | Small | 0.5.45123 (Hotfix 15)</a></li>
+
+                        <li><a href="https://store.steampowered.com/news/app/1604030/view/3427828161922594931" style="text-decoration: none; font-weight: bold;">2022-10-24 | Patch 0.5.44979 | Halloween Update: Bloodfeast</a></li>
+                        <ul>
+                            <li>Old saves are now automatically backed up when they're loaded in a new game version. The backed-up save is placed in <code>[Save Directory]\.BACKUP\[Old Game Version]\AutoSave_X.save</code></li>
+                            <li>Added 'Shuffle V Blood Locations'</li>
+                            <li>Added 'Shuffle V Blood Abilities'</li>
+                            <li>Added 'Shuffle V Blood Tech'</li>
+                            <li>The Haunted Nights Castle Pack DLC</li>
+                        </ul>
+
+                        <li><a href="https://store.steampowered.com/news/app/1604030/view/3296095971048833285" style="text-decoration: none; font-weight: bold;">2022-09-28 | Small | 0.5.43954 (Hotfix 13)</a></li>
+                        
+                        <li><a href="https://store.steampowered.com/news/app/1604030/view/3395173894702519583" style="text-decoration: none; font-weight: bold;">2022-09-20 | Small | 0.5.43630 (Hotfix 12)</a></li>
+                        <ul>
+                            <li>Saves with invalid game settings will now be marked as “Corrupt” in the Continue screen to help players identify potential connection issues</li>
+                            <li>Save files will now become one single file instead of a folder with multiple files.</li>
+                        </ul>
+                        
+                        <li><a href="https://store.steampowered.com/news/app/1604030/view/3252182704432180726" style="text-decoration: none; font-weight: bold;">2022-08-25 | Small | 0.5.43163 (Hotfix 11)</a></li>
+ 
+                        <li><a href="https://store.steampowered.com/news/app/1604030/view/3399674324100780328" style="text-decoration: none; font-weight: bold;">2022-08-10 | Small | 0.5.42584 (Hotfix 10)</a></li>
+                        
+                        <li><a href="https://store.steampowered.com/news/app/1604030/view/3320858336357099261" style="text-decoration: none; font-weight: bold;">2022-07-08 | Medium | 0.5.42584 (Hotfix 9)</a></li>
+                        <ul>
+                            <li>Disabled LowerFPSWhenEmpty due to unexpected side effects</li>
+                            <li>Fixed DLCs not working in LAN mode under certain conditions.</li>
+                        </ul>
+
+                        <li><a href="https://store.steampowered.com/news/app/1604030/view/3320856891267488493" style="text-decoration: none; font-weight: bold;">2022-07-06 | Medium | 0.5.42553 (Hotfix 8)</a></li>
+                        <ul>
+                            <li>Server Wipes</li>
+                            <li>Severs that support Scheduled Wipes will have an icon in the server list</li>
+                            <li>Server with Scheduled Wipes will display the number of days remaining until the next planned wipe.</li>
+                            <li>Added new ServerHostSettings for lowering FPS on servers when they are empty: <code>-LowerFPSWhenEmpty</code> and <code>-LowerFPSWhenEmptyValue.</code> The default is <code>true</code> and with a value of <code>1</code>.</li>
+                            <li>Official PvP Presets now uses <code>1.25</code> <code>BloodDrainModifier</code> instead of <code>1.0</code></li>
+                            <li>DLCs now work in LAN Mode.</li>
+                            <li>The initial Server List request will now prioritize servers with players, to increase the speed at which servers are fetched.</li>
+                            <li>Replaced Days Played with Days Running in the Server Details.</li>
+                            <li>Days Played previously displayed the number of in-game days since server start, Days Running will now instead display the number of real-time days since server start.</li>
+                        </ul>
+
+                        <li><a href="https://store.steampowered.com/news/app/1604030/view/3320856891245612392" style="text-decoration: none; font-weight: bold;">2022-06-29 | Medium | 0.5.42405 (Hotfix 7)</a></li>
+                        <ul>
+                            <li>We added Steam Cloud support for Private Game saves. This allows playing your saves on different computers.</li>
+                            <li>All new Private Games hosted will now be saved on Steam Cloud by default.</li>
+                            <li>You can move saves to/from Steam Cloud Saving.</li>
+                        </ul>
+
+                        <li><a href="https://store.steampowered.com/news/app/1604030/view/3320856891220270028" style="text-decoration: none; font-weight: bold;">2022-06-22 | Medium | 0.5.42236 (Hotfix 6)</a></li>
+                        <ul>
+                            <li>Added a new admin command <code>decayusercastles [playername]</code> that puts all the castles owned by a target player in decay.</li>
+                            <li>The <code>adminlist.txt</code> and <code>banlist.txt</code> files are now loaded from both the default Settings folder as well as from the local override Settings folder. These files always save to the local override folder now.</li>
+                            <li>The RCON socket now binds to the bind address if specified. There is also a specific RCON Bind Address to override the default one.</li>
+                            <li>Lumber, Stone, and Plant Fibre no longer block players from using waygates or bat form.</li>
+                        </ul>
+
+                        <li><a href="https://store.steampowered.com/news/app/1604030/view/4822806821988384686" style="text-decoration: none; font-weight: bold;">2022-06-15 | Medium | 0.5.42050</a></li>
+                        <ul>
+                            <li>Players can now dismantle floors and borders that are next to walls/pillars without having to dismantle any wall/pillar first, as long as this does not leave any wall/pillar without a floor connection (#305517).</li>
+                            <li>Improved error handling and error feedback when the server saves the game world (related to #304262 and #304381 but is not expected to solve all reported cases).</li>
+                            <li>Added more validation and safety checks to catch more types of rare errors while saving.</li>
+                            <li>If the server fails to save, all active players on the server now get a chat notification containing basic information about the type of error that was encountered.</li>
+                            <li>The server no longer uses the Windows temp folder while saving the world. It instead saves the temporary files to a neighboring folder to the target save path.</li>
+                            <li>Fixed an issue where territory and buildings had a chance of not getting destroyed with their castle if they were constructed at a large enough distance from the Castle Heart (#306085, #305657).</li>
+                        </ul>
+
+                        <li><a href="https://store.steampowered.com/news/app/1604030/view/3326485122216671067" style="text-decoration: none; font-weight: bold;">2022-06-09 | Small | 0.5.41821</a></li>
+                        <ul>
+                            <li>Server optimizations for servers with long up times and/or a lot of players.</li>
+                            <li>Optimized the map and minimap on servers with a lot of castles.</li>
+                            <li>Updated the Social Panel: Now it displays all players connected to the server and their SteamID. We also added text chat muting functionality. Muting is persistent between sessions now.</li>
+                            <li>The Blood Essence Drain Modifier setting should now work properly.</li>
+                        </ul>
+
+                        <li><a href="https://store.steampowered.com/news/app/1604030/view/3294958655399932645" style="text-decoration: none; font-weight: bold;">2022-05-30 | Small | Client 0.5.41669</a></li>
+                        <ul>
+                            <li>Maximum clan size has been increased to 50</li>
+                            <li>Server Details will now show the amount of in-game days the server has been running for.</li>
+                            <li>Altering the 'Refinement Cost' and 'Refinement Rate' server settings no longer affects the blood essence consumption rate of the Castle Heart.</li>
+                            <li>Occurrences of multiple spawns of the same V Blood units will now be repaired upon server restart.</li>
+                            <li>Optimized server memory by removing data from disconnected users.</li>
+                        </ul>
+
+                        <li><a href="https://store.steampowered.com/news/app/1604030/view/3294958655395719327" style="text-decoration: none; font-weight: bold;">2022-05-30 | Small | Client 0.5.41591</a></li>
+                        
+                        <li><a href="https://store.steampowered.com/news/app/1604030/view/3294958655377836605" style="text-decoration: none; font-weight: bold;">2022-05-25 | Major | Hotfix: 0.5.41448</a></li>
+                        <ul>
+                            <li>Added Steam Cloud support</li>
+                            <li>Added <code>changehealthofclosesttomouse</code> to console</li>
+                            <li>Added <code>changedurability</code> to console</li>
+                            <li>Added <code>addtime</code> to console</li>
+                            <li>Added LAN/Offline mode</li>
+                        </ul>
+                        
+                        <li><a href="https://store.steampowered.com/news/app/1604030/view/3218396837686301547" style="text-decoration: none; font-weight: bold;">2022-05-19 | Small | Hotfix: 0.5.41237</a></li>
+                    </ul>
+                </ul>
+                <h4 class="text-uppercase mb-4">Gameplay</h4>                
+                <ul>
+                    <li><a href="https://store.steampowered.com/account/remotestorageapp/?appid=1604030" style="text-decoration: none; font-weight: bold;">Steam Cloud Data for V Rising</a></li>
+                    <li><a href="https://www.battlemetrics.com/servers/vrising" style="text-decoration: none; font-weight: bold;">BattleMetrics</a></li>
+                    <li><a href="https://vrising-map.com/" style="text-decoration: none; font-weight: bold;">V-Rising Map.com</a></li>
+                    <li><a href="https://v-rising.map.gd/a/" style="text-decoration: none; font-weight: bold;">V Rising Map.gd</a></li>
+                    <li><a href="https://steamdb.info/app/1604030/graphs/" style="text-decoration: none; font-weight: bold;">Steam Statistics</a></li>
+                </ul>
+                <h4 class="text-uppercase mb-4">File Locations</h4>
+                <ul>
+                <h4 class="text-capitalize mb-4">Logs</h4>
+                <ul>
+                    <li><b>Dedicated Server</b><pre>&lt;SERVER_INSTALLATION_DIRECTORY&gt;\logs\VRisingServer.log</pre></li>
+                    <li><b>Private Server</b><pre>%USERPROFILE%\AppData\LocalLow\Stunlock Studios\VRising\Player-server.log</pre></li>
+                    <li><b>Player Logs</b><pre>%USERPROFILE%\AppData\LocalLow\Stunlock Studios\VRising\Player.log</pre></li>
+                </ul>
+                <h4 class="text-capitalize mb-4">Server Settings</h4>
+                <ul>
+                    <li>NOTE: These files are read in this order, if they exist. (Highest priority to least)</li>
+                    <li>.\VRisingDedicatedServer\save-data\Saves\v2\world1\ServerGameSettings.json</li>
+                    <li>.\VRisingDedicatedServer\save-data\Settings\ServerGameSettings.json</li>
+                    <li>.\VRisingDedicatedServer\VRisingServer_Data\StreamingAssets\Settings\ServerGameSettings.json</li>
+                    <li><a href="https://cdn.stunlock.com/blog/2022/05/25083113/Game-Server-Settings.pdf" style="text-decoration: none; font-weight: bold;">Official PDF for ServerGameSettings</a></li>
+                </ul>
+                <h4 class="text-capitalize mb-4">Client Configuration</h4>
+                <ul>
+                    <li><b>Console Profile</b> <pre>%USERPROFILE%\AppData\LocalLow\Stunlock Studios\VRising\ConsoleProfile\&lt;MACHINE_NAME&gt;.prof</pre></li>
+                    <li><b>Client</b> <pre>%USERPROFILE%\AppData\LocalLow\Stunlock Studios\VRising\Settings\v2\ClientSettings.json</pre></li>
+                </ul>
+                <h4 class="text-capitalize mb-4">Savegames</h4>
+                <ul>
+                    <li><b>Dedicated Server</b> <pre>&lt;SERVER_INSTALLATION_DIRECTORY&gt;\&lt;PERSISTENT_DATA_PATH>\Saves\v1\&lt;WORLD_NAME&gt;\AutoSave_NNNN</pre></li>
+                    <li><b>Cloud Disabled Private Server</b><pre>%USERPROFILE%\AppData\LocalLow\Stunlock Studios\VRising\Saves\v2\&lt;GAME_UUID&gt;\AutoSave_NNNN</pre></li>
+                    <li><b>Cloud Enabled Private Server</b><pre>%USERPROFILE%\AppData\LocalLow\Stunlock Studios\VRising\CloudSaves\&lt;STEAM_PLAYER_ID&gt;\v2\&lt;GAME_UUID&gt;\AutoSave_NNNN</pre></li>
+                        <ul>
+                            <li><a href="https://store.steampowered.com/account/remotestorageapp/?appid=1604030" style="text-decoration: none; font-weight: bold;">Steam Cloud for VRising</a></li>  
+                        </ul>
+                </ul>
+
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">About VMColonel</h4>
+                        <p class="lead mb-0">
+                            VMColonel is a freelance developer from Canada.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright © VMColonel#4364 2023</small></div>
+        </div>
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        <div class="scroll-to-top d-lg-none position-fixed">
+            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/mail/jqBootstrapValidation.js"></script>
+        <script src="https://startbootstrap.github.io/startbootstrap-freelancer/assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="https://startbootstrap.github.io/startbootstrap-freelancer/js/scripts.js"></script>
+    </body>
+</html>
